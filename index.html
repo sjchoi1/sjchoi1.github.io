@@ -1,91 +1,320 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Sangjin Choi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangjin Choi - Ph.D. Student</title>
+  <style>
+    /* --- CSS VARIABLES & RESET --- */
+    :root {
+      --primary-color: #2563eb;
+      /* Academic Blue */
+      --text-main: #1f2937;
+      --text-secondary: #4b5563;
+      --text-light: #6b7280;
+      --bg-color: #ffffff;
+      --bg-accent: #f3f4f6;
+      --border-color: #e5e7eb;
+      --max-width: 800px;
+    }
 
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-  <meta name="viewport" content="width=device-width">
-  <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- LAYOUT --- */
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    /* --- HEADER SECTION --- */
+    header {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 2rem;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      /* Makes it circular */
+      object-fit: cover;
+      border: 3px solid var(--bg-accent);
+      flex-shrink: 0;
+    }
+
+    .header-content h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .role {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--bg-accent);
+      color: #111;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    /* --- LISTS (Education & Experience) --- */
+    ul {
+      list-style: none;
+    }
+
+    .simple-list li {
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--border-color);
+    }
+
+    /* --- PUBLICATIONS --- */
+    .pub-list li {
+      margin-bottom: 1.75rem;
+    }
+
+    .pub-venue {
+      display: inline-block;
+      background-color: var(--bg-accent);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pub-title {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-authors {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-authors u {
+      text-decoration: none;
+      font-weight: 600;
+      color: #000;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .pub-links {
+      font-size: 0.85rem;
+    }
+
+    .pub-links a {
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .header-content {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>Sangjin Choi</h1>
-      <img src="./img/profile.jpg" style="width:200px;margin-bottom:15px;" />
-      <p style="margin-bottom:5px">Ph.D. Student</p>
-      <p style="margin-bottom:5px">
-        <a target="_blank" rel="noopener noreferrer" href="https://casyslab.kaist.ac.kr/">CASYS Lab</a>, KAIST
-      </p>
-      <p style="margin-bottom:15px">
-        Advisor: <a target="_blank" rel="noopener noreferrer" href="https://sites.google.com/view/yjkwon/home">Youngjin Kwon</a>
-      </p>
-      <p style="margin-bottom:15px">sjchoi (at) casys.kaist.ac.kr</p>
-      <p style="margin-bottom:5px">
-        <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&hl=ko">Google Scholar</a>
-      </p>
+      <img src="https://ui-avatars.com/api/?name=Sangjin+Choi&background=random&size=200" alt="Sangjin Choi"
+        class="profile-img">
+
+      <div class="header-content">
+        <h1>Sangjin Choi</h1>
+        <div class="role">Ph.D. Student</div>
+        <div class="contact-info">
+          <p>
+            <a target="_blank" rel="noopener noreferrer" href="https://casyslab.kaist.ac.kr/">CASYS Lab</a>, KAIST
+          </p>
+          <p>
+            Advisor: <a target="_blank" rel="noopener noreferrer"
+              href="https://sites.google.com/view/yjkwon/home">Youngjin Kwon</a>
+          </p>
+          <p>sjchoi (at) casys.kaist.ac.kr</p>
+          <p>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&hl=ko">Google Scholar</a>
+          </p>
+        </div>
+      </div>
     </header>
-    <section style="margin-top:10px">
-      <h2>About</h2>
-      <p>I am a Ph.D. student at KAIST. I specialize in efficient ML systems.
-      </p>
-      <h2>Education</h2>
-      <ul>
-        <li>Ph.D. in Computer Science, KAIST, current</li>
-        <li>M.S. in Computer Science, KAIST, 2021</li>
-        <li>B.S. in Computer Science, KAIST, 2019</li>
-      </ul>
-      <h2>Experience</h2>
-      <ul>
-        <li>Research Intern, Systems and Networking Research Group, Microsoft Research Asia, Beijing, China, Jul 2025 - Jan 2026</li>
-      </ul>
-      <h2>Publications</h2>
-      <ul style="list-style:none;padding-left:0;">
-        <li style="margin-bottom:20px;">
-          <span style="color:#666;font-size:13px;">[EuroSys'26]</span><br>
-          <b>MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant Cloud</b><br>
-          Changjun Lee, <u>Sangjin Choi</u>, Youngjin Kwon
-        </li>
-        <li style="margin-bottom:20px;">
-          <span style="color:#666;font-size:13px;">[Findings of NAACL'25]</span><br>
-          <b>Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding</b><br>
-          Sukmin Cho, <u>Sangjin Choi</u>, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C. Park, Youngjin Kwon
-        </li>
-        <li style="margin-bottom:20px;">
-          <span style="color:#666;font-size:13px;">[ICCAD'23]</span><br>
-          <b>PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads</b><br>
-          Jaehoon Heo, Yongwon Shin, <u>Sangjin Choi</u>, Sungwoong Yune, Jung-Hoon Kim, Hyojin Sung, Youngjin Kwon, Joo-Young Kim<br>
-          <a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/document/10323637">Paper</a>
-        </li>
-        <li style="margin-bottom:20px;">
-          <span style="color:#666;font-size:13px;">[USENIX ATC'23]</span><br>
-          <b>EnvPipe: Performance-preserving DNN Training Framework for Saving Energy</b><br>
-          <u>Sangjin Choi</u>, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, Youngjin Kwon<br>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.usenix.org/system/files/atc23-choi.pdf">Paper</a> |
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/casys-kaist/EnvPipe">Code</a> |
-          <a target="_blank" rel="noopener noreferrer" href="https://www.usenix.org/system/files/atc23_slides_choi-sangjin.pdf">Slides</a> |
-          <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=RfAq1JbHbXI&list=PLbRoZ5Rrl5lcmeTs9HR0knb1Y8Ov_YXBT&index=50&ab_channel=USENIX">Talk</a>
-        </li>
-        <li style="margin-bottom:20px;">
-          <span style="color:#666;font-size:13px;">[USENIX ATC'22]</span><br>
-          <b>Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory</b><br>
-          <u>Sangjin Choi</u>*, Taeksoo Kim*, Jinwoo Jeong, Rachata Ausavarungniurn, Myeongjae Jeon, Youngjin Kwon, Jeongseob Ahn<br>
-          <span style="font-size:13px;color:#666;">*Co-first author</span><br>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.usenix.org/system/files/atc22-choi-sangjin_1.pdf">Paper</a> |
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/casys-kaist/HUVM">Code</a> |
-          <a target="_blank" rel="noopener noreferrer" href="https://www.usenix.org/sites/default/files/conference/protected-files/atc22_slides_choi.pdf">Slides</a> |
-          <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=fAQhYPzW13I">Talk</a>
-        </li>
-      </ul>
-    </section>
+
+    <main>
+      <section>
+        <h2>About</h2>
+        <p>I am a Ph.D. student at KAIST. I specialize in efficient Machine Learning systems.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul class="simple-list">
+          <li><b>Ph.D.</b> in Computer Science, KAIST, Current</li>
+          <li><b>M.S.</b> in Computer Science, KAIST, 2021</li>
+          <li><b>B.S.</b> in Computer Science, KAIST, 2019</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <ul class="simple-list">
+          <li>
+            <b>Research Intern</b>, Systems and Networking Research Group<br>
+            <span style="color:var(--text-light); font-size: 0.9em">Microsoft Research Asia, Beijing, China (Jul 2025 -
+              Jan 2026)</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Publications</h2>
+        <ul class="pub-list">
+
+          <li>
+            <span class="pub-venue">EuroSys '26</span>
+            <span class="pub-title">MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant
+              Cloud</span>
+            <div class="pub-authors">
+              Changjun Lee, <u>Sangjin Choi</u>, Youngjin Kwon
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-venue">Findings of NAACL '25</span>
+            <span class="pub-title">Lossless Acceleration of Large Language Models with Hierarchical Drafting based on
+              Temporal Locality in Speculative Decoding</span>
+            <div class="pub-authors">
+              Sukmin Cho, <u>Sangjin Choi</u>, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C.
+              Park, Youngjin Kwon
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-venue">ICCAD '23</span>
+            <span class="pub-title">PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning
+              Workloads</span>
+            <div class="pub-authors">
+              Jaehoon Heo, Yongwon Shin, <u>Sangjin Choi</u>, Sungwoong Yune, Jung-Hoon Kim, Hyojin Sung, Youngjin Kwon,
+              Joo-Young Kim
+            </div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://ieeexplore.ieee.org/document/10323637">Paper</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-venue">USENIX ATC '23</span>
+            <span class="pub-title">EnvPipe: Performance-preserving DNN Training Framework for Saving Energy</span>
+            <div class="pub-authors">
+              <u>Sangjin Choi</u>, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, Youngjin Kwon
+            </div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://www.usenix.org/system/files/atc23-choi.pdf">Paper</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/casys-kaist/EnvPipe">Code</a>
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://www.usenix.org/system/files/atc23_slides_choi-sangjin.pdf">Slides</a>
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://www.youtube.com/watch?v=RfAq1JbHbXI&list=PLbRoZ5Rrl5lcmeTs9HR0knb1Y8Ov_YXBT&index=50&ab_channel=USENIX">Talk</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-venue">USENIX ATC '22</span>
+            <span class="pub-title">Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual
+              Memory</span>
+            <div class="pub-authors">
+              <u>Sangjin Choi</u>*, Taeksoo Kim*, Jinwoo Jeong, Rachata Ausavarungniurn, Myeongjae Jeon, Youngjin Kwon,
+              Jeongseob Ahn
+              <span style="font-size:0.85em; color:#666; margin-left: 5px;">(*Co-first author)</span>
+            </div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://www.usenix.org/system/files/atc22-choi-sangjin_1.pdf">Paper</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/casys-kaist/HUVM">Code</a>
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://www.usenix.org/sites/default/files/conference/protected-files/atc22_slides_choi.pdf">Slides</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=fAQhYPzW13I">Talk</a>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+    </main>
   </div>
-  <script src="javascripts/scale.fix.js"></script>
 </body>
 
 </html>
