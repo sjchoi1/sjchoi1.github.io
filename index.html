@@ -1,4 +1,3 @@
-=
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +15,8 @@
       /* Academic Blue */
       --highlight-bg: #f8fbff;
       /* Very light blue for first-author papers */
+      --tag-bg: #f3f4f6;
+      /* Light grey for tags */
       --border: #eaeaea;
       --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       --font-mono: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
@@ -33,8 +34,8 @@
       color: var(--text-main);
       line-height: 1.6;
       font-size: 16px;
-      /* UPDATED: Increased width to 1000px to make page wider */
       max-width: 1000px;
+      /* Wide layout */
       margin: 0 auto;
       padding: 4rem 2rem;
     }
@@ -93,6 +94,30 @@
       font-weight: 600;
     }
 
+    /* --- TAGS --- */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background-color: var(--tag-bg);
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.3rem 0.8rem;
+      border-radius: 99px;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+
+    .tag:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
     /* --- LISTS --- */
     ul {
       list-style: none;
@@ -102,15 +127,17 @@
       display: flex;
       margin-bottom: 2rem;
       gap: 3rem;
-      /* Wide gap for distinct separation */
     }
 
+    /* UPDATED: Increased width and added nowrap to keep date on one line */
     .date {
       font-family: var(--font-mono);
       font-size: 0.85rem;
       color: var(--text-light);
-      width: 150px;
-      /* Fixed width column */
+      width: 190px;
+      /* WIDER to fit text on one line */
+      white-space: nowrap;
+      /* Forces text to never wrap */
       flex-shrink: 0;
       font-weight: 500;
       padding-top: 0.1rem;
@@ -132,7 +159,6 @@
       border-radius: 6px;
     }
 
-    /* STYLE FOR FIRST AUTHOR PAPERS */
     .pub-item.first-author {
       background-color: var(--highlight-bg);
       border-left: 4px solid var(--accent);
@@ -147,7 +173,6 @@
       font-family: var(--font-mono);
       font-size: 0.9rem;
       font-weight: 900;
-      /* Extra Thick */
       color: #000;
       text-align: right;
     }
@@ -204,7 +229,10 @@
       .date {
         width: 100%;
         margin-bottom: 0.25rem;
+        white-space: normal;
       }
+
+      /* Reset for mobile */
 
       .pub-item {
         grid-template-columns: 1fr;
@@ -240,6 +268,13 @@
       I am a Ph.D. student advised by <a href="https://sites.google.com/view/yjkwon/home">Youngjin Kwon</a>.
       My research focuses on building efficient ML systems.
     </p>
+
+    <div class="tags-container">
+      <span class="tag">Pruning</span>
+      <span class="tag">Speculative Decoding</span>
+      <span class="tag">Sparse Attention</span>
+      <span class="tag">Energy Efficient Training</span>
+    </div>
   </section>
 
   <section>
@@ -332,9 +367,7 @@
           <span class="me">Sangjin Choi</span>, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, Youngjin Kwon
         </div>
         <div class="pub-links">
-          <a href="https://www.usenix.org/system/files/atc23-choi.pdf" target="_blank">Paper</a>
-          <a href="https://github.com/casys-kaist/EnvPipe" target="_blank">Code</a>
-          <a href="https://www.usenix.org/system/files/atc23_slides_choi-sangjin.pdf" target="_blank">Slides</a>
+          <a href="https://www.usenix.org/conference/atc23/presentation/choi" target="_blank">Paper</a>
         </div>
       </div>
     </div>
@@ -348,10 +381,7 @@
           Youngjin Kwon, Jeongseob Ahn
         </div>
         <div class="pub-links">
-          <a href="https://www.usenix.org/system/files/atc22-choi-sangjin_1.pdf" target="_blank">Paper</a>
-          <a href="https://github.com/casys-kaist/HUVM" target="_blank">Code</a>
-          <a href="https://www.usenix.org/sites/default/files/conference/protected-files/atc22_slides_choi.pdf"
-            target="_blank">Slides</a>
+          <a href="https://www.usenix.org/conference/atc22/presentation/choi-sangjin" target="_blank">Paper</a>
         </div>
       </div>
     </div>
