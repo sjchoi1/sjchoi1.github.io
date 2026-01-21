@@ -15,8 +15,11 @@
       /* Academic Blue */
       --highlight-bg: #f8fbff;
       /* Very light blue for first-author papers */
-      --tag-bg: #f3f4f6;
-      /* Light grey for tags */
+
+      /* UPDATED: Sky blue tag colors */
+      --tag-bg: #e0f2fe;
+      --tag-text: #0369a1;
+
       --border: #eaeaea;
       --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       --font-mono: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
@@ -35,7 +38,6 @@
       line-height: 1.6;
       font-size: 16px;
       max-width: 1000px;
-      /* Wide layout */
       margin: 0 auto;
       padding: 4rem 2rem;
     }
@@ -98,24 +100,18 @@
     .tags-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 0.6rem;
       margin-top: 1rem;
     }
 
     .tag {
       background-color: var(--tag-bg);
-      color: var(--text-light);
+      color: var(--tag-text);
       font-size: 0.85rem;
-      font-weight: 500;
+      font-weight: 600;
       padding: 0.3rem 0.8rem;
-      border-radius: 99px;
-      transition: all 0.2s ease;
+      border-radius: 4px;
       cursor: default;
-    }
-
-    .tag:hover {
-      background-color: var(--accent);
-      color: #fff;
     }
 
     /* --- LISTS --- */
@@ -129,15 +125,12 @@
       gap: 3rem;
     }
 
-    /* UPDATED: Increased width and added nowrap to keep date on one line */
     .date {
       font-family: var(--font-mono);
       font-size: 0.85rem;
       color: var(--text-light);
       width: 190px;
-      /* WIDER to fit text on one line */
       white-space: nowrap;
-      /* Forces text to never wrap */
       flex-shrink: 0;
       font-weight: 500;
       padding-top: 0.1rem;
@@ -232,8 +225,6 @@
         white-space: normal;
       }
 
-      /* Reset for mobile */
-
       .pub-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
@@ -302,15 +293,15 @@
     <ul>
       <li class="experience-item">
         <span class="date">Current</span>
-        <b>Ph.D.</b> in Computer Science, KAIST
+        <b>Ph.D.</b>, School of Computing, KAIST
       </li>
       <li class="experience-item">
         <span class="date">2021</span>
-        <b>M.S.</b> in Computer Science, KAIST
+        <b>M.S.</b>, School of Computing, KAIST
       </li>
       <li class="experience-item">
         <span class="date">2019</span>
-        <b>B.S.</b> in Computer Science, KAIST
+        <b>B.S.</b>, School of Computing, KAIST
       </li>
     </ul>
   </section>
