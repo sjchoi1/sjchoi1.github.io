@@ -16,6 +16,8 @@
       --highlight-bg: #f8fbff;
       /* Very light blue for first-author papers */
       --border: #eaeaea;
+      --job-market-color: #d9534f;
+      /* Alert color for job market */
       --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       --font-mono: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
     }
@@ -51,7 +53,7 @@
 
     /* --- HEADER --- */
     header {
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
     }
 
     h1 {
@@ -59,7 +61,20 @@
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.1;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* JOB MARKET STATUS BADGE */
+    .status-badge {
+      display: inline-block;
+      background-color: #fff0f0;
+      color: var(--job-market-color);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ffd0d0;
     }
 
     .contact-links {
@@ -95,15 +110,28 @@
       list-style: none;
     }
 
+    /* Updated to Flexbox for better alignment of multi-line text */
     .experience-item {
-      margin-bottom: 1rem;
+      display: flex;
+      margin-bottom: 1.5rem;
     }
 
     .date {
       font-family: var(--font-mono);
       font-size: 0.85rem;
       color: var(--text-light);
-      margin-right: 0.5rem;
+      width: 160px;
+      /* Fixed width column */
+      flex-shrink: 0;
+      /* Prevent shrinking */
+      font-weight: 500;
+      padding-top: 0.1rem;
+      /* Optical alignment */
+    }
+
+    .exp-details {
+      display: flex;
+      flex-direction: column;
     }
 
     /* --- PUBLICATIONS LAYOUT --- */
@@ -114,33 +142,26 @@
       gap: 1.5rem;
       align-items: baseline;
       padding: 1rem;
-      /* Added padding for highlight effect */
       border-radius: 6px;
-      transition: background-color 0.2s ease;
     }
 
     /* STYLE FOR FIRST AUTHOR PAPERS */
     .pub-item.first-author {
       background-color: var(--highlight-bg);
-      /* Subtle background */
       border-left: 4px solid var(--accent);
-      /* Blue bar on the left */
       padding-left: 1.25rem;
-      /* Adjust for the border */
     }
 
     .pub-item.first-author .pub-venue {
       color: var(--accent);
-      /* Make venue blue for first author papers */
     }
 
     .pub-venue {
       font-family: var(--font-mono);
       font-size: 0.9rem;
       font-weight: 900;
-      /* Extra Thick as requested */
+      /* Extra Thick */
       color: #000;
-      /* Dark black for maximum contrast */
       text-align: right;
     }
 
@@ -188,6 +209,15 @@
         font-size: 2.25rem;
       }
 
+      .experience-item {
+        flex-direction: column;
+      }
+
+      .date {
+        width: 100%;
+        margin-bottom: 0.25rem;
+      }
+
       .pub-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
@@ -198,10 +228,6 @@
         text-align: left;
         margin-bottom: 0.25rem;
       }
-
-      .pub-item.first-author {
-        border-left-width: 3px;
-      }
     }
   </style>
 </head>
@@ -211,13 +237,16 @@
   <header>
     <h1>Sangjin Choi</h1>
 
+    <div class="status-badge">
+      🚀 On the Job Market: September 2027
+    </div>
+
     <div class="contact-links">
       <a href="mailto:sjchoi@casys.kaist.ac.kr">sjchoi@casys.kaist.ac.kr</a>
       <span>/</span>
       <a href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&hl=ko" target="_blank">Google Scholar</a>
       <span>/</span>
       <a href="https://casyslab.kaist.ac.kr/" target="_blank">CASYS Lab</a>
-      <span>/</span>
     </div>
   </header>
 
@@ -233,8 +262,18 @@
     <h2>Experience</h2>
     <ul>
       <li class="experience-item">
+        <span class="date">Mar 2026 - May 2026</span>
+        <div class="exp-details">
+          <span><b>Research Intern</b>, Systems and Networking Research Group</span>
+          <span>Microsoft Research Asia (Vancouver)</span>
+        </div>
+      </li>
+      <li class="experience-item">
         <span class="date">Jul 2025 - Jan 2026</span>
-        <b>Research Intern</b>, Microsoft Research Asia (Beijing)
+        <div class="exp-details">
+          <span><b>Research Intern</b>, Systems and Networking Research Group</span>
+          <span>Microsoft Research Asia (Beijing)</span>
+        </div>
       </li>
     </ul>
   </section>
