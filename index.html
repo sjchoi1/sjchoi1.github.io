@@ -14,6 +14,10 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
   <style>
     /* --- RESET & BASICS --- */
     :root {
@@ -64,12 +68,26 @@
     /* --- HEADER --- */
     header {
       margin-bottom: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+    }
+
+    .profile-photo {
+      width: 200px;
+      height: 240px;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 12px;
+      flex-shrink: 0;
     }
 
     h1 {
-      font-size: 3rem;
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-size: 3.25rem;
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.01em;
       line-height: 1.1;
       margin-bottom: 0.5rem;
     }
@@ -208,6 +226,17 @@
 
     /* --- RESPONSIVE --- */
     @media (max-width: 600px) {
+      header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .profile-photo {
+        width: 140px;
+        height: 170px;
+      }
+
       h1 {
         font-size: 2.25rem;
       }
@@ -240,21 +269,25 @@
 <body>
 
   <header>
-    <h1>Sangjin Choi</h1>
+    <div class="header-text">
+      <h1>Sangjin Choi</h1>
 
-    <div class="contact-links">
-      <a href="mailto:sjchoi@casys.kaist.ac.kr">sjchoi@casys.kaist.ac.kr</a>
-      <span>/</span>
-      <a href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&hl=ko" target="_blank">Google Scholar</a>
-      <span>/</span>
-      <a href="https://casyslab.kaist.ac.kr/" target="_blank">CASYS Lab</a>
+      <div class="contact-links">
+        <a href="mailto:sjchoi@casys.kaist.ac.kr">sjchoi@casys.kaist.ac.kr</a>
+        <span>/</span>
+        <a href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&hl=ko" target="_blank">Google Scholar</a>
+        <span>/</span>
+        <a href="https://casyslab.kaist.ac.kr/" target="_blank">CASYS Lab</a>
+      </div>
     </div>
+
+    <img class="profile-photo" src="img/img.JPG" alt="Sangjin Choi">
   </header>
 
   <section>
     <h2>About</h2>
     <p>
-      I recently completed my Ph.D. advised by <a href="https://sites.google.com/view/yjkwon/home">Youngjin Kwon</a>.
+      I am a Ph.D. graduate advised by <a href="https://sites.google.com/view/yjkwon/home">Youngjin Kwon</a>.
       My research focuses on building efficient ML systems.
     </p>
 
