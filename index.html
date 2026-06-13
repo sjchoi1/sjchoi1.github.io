@@ -22,8 +22,6 @@
       --text-light: #555555;
       --accent: #2c5aa0;
       /* Academic Blue */
-      --highlight-bg: #f8fbff;
-      /* Very light blue for first-author papers */
 
       /* Sky blue tag colors */
       --tag-bg: #e0f2fe;
@@ -162,16 +160,6 @@
       border-radius: 6px;
     }
 
-    .pub-item.first-author {
-      background-color: var(--highlight-bg);
-      border-left: 4px solid var(--accent);
-      padding-left: 1.25rem;
-    }
-
-    .pub-item.first-author .pub-venue {
-      color: var(--accent);
-    }
-
     .pub-venue {
       font-family: var(--font-mono);
       font-size: 0.9rem;
@@ -283,7 +271,7 @@
     <h2>Education</h2>
     <ul>
       <li class="experience-item">
-        <span class="date">Sep 2021 - Current</span>
+        <span class="date">Sep 2021 - Aug 2026</span>
         <span><b>Ph.D.</b>, School of Computing, KAIST</span>
       </li>
       <li class="experience-item">
@@ -327,6 +315,9 @@
         <div class="pub-authors">
           Hyunjae Lee, <span class="me">Sangjin Choi</span>, Seungjae Lim, Youngjin Kwon
         </div>
+        <div class="pub-links">
+          <a href="https://mlsys.org/virtual/2026/oral/3849" target="_blank">Paper</a>
+        </div>
       </div>
     </div>
 
@@ -337,6 +328,9 @@
         </div>
         <div class="pub-authors">
           Changjun Lee, <span class="me">Sangjin Choi</span>, Youngjin Kwon
+        </div>
+        <div class="pub-links">
+          <a href="https://dl.acm.org/doi/abs/10.1145/3767295.3769371" target="_blank">Paper</a>
         </div>
       </div>
     </div>
@@ -371,7 +365,7 @@
       </div>
     </div>
 
-    <div class="pub-item first-author">
+    <div class="pub-item">
       <div class="pub-venue">USENIX ATC '23</div>
       <div class="pub-details">
         <div class="pub-title">EnvPipe: Performance-preserving DNN Training Framework for Saving Energy</div>
@@ -384,7 +378,7 @@
       </div>
     </div>
 
-    <div class="pub-item first-author">
+    <div class="pub-item">
       <div class="pub-venue">USENIX ATC '22</div>
       <div class="pub-details">
         <div class="pub-title">Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory</div>
