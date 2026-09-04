@@ -90,64 +90,51 @@ I build cost-driven AI infrastructure with a deep understanding of hardware, sys
   \item \textbf{[MLSys 2026]} Hyunjae Lee, \textbf{Sangjin Choi}, Seungjae Lim, and Youngjin Kwon. ``BEAM: Joint Resource--Power Optimization for Energy-Efficient LLM Inference under SLO Constraints.''
   \item \textbf{[ACM EuroSys 2026]} Changjun Lee, \textbf{Sangjin Choi}, and Youngjin Kwon. ``MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant Cloud.''
   \item \textbf{[Findings of NAACL 2025]} Sukmin Cho, \textbf{Sangjin Choi}, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C. Park, and Youngjin Kwon. ``Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding.''
-  \item \textbf{[IEEE/ACM ICCAD 2023]} Jehoon Heo, Yongwon Shin, \textbf{Sangjin Choi}, Sungwoong Yune, Junghoon Kim, Youngjin Kwon, Hyojin Sung, and Joo-Young Kim. ``PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads.''
+  \item \textbf{[IEEE/ACM ICCAD 2023]} Jaehoon Heo, Yongwon Shin, \textbf{Sangjin Choi}, Sungwoong Yune, Jung-Hoon Kim, Hyojin Sung, Youngjin Kwon, and Joo-Young Kim. ``PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads.''
   \item \textbf{[USENIX ATC 2023]} \textbf{Sangjin Choi}, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, and Youngjin Kwon. ``EnvPipe: Performance-preserving DNN Training Framework for Saving Energy.''
   \item \textbf{[USENIX ATC 2022]} \textbf{Sangjin Choi}\textsuperscript{*}, Taeksoo Kim\textsuperscript{*}, Jinwoo Jeong, Rachata Ausavarungnirun, Myeongjae Jeon, Youngjin Kwon, and Jeongseob Ahn. ``Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory.'' (\textsuperscript{*}Equal contribution.)
 \end{enumerate}
 
 \newpage
 
-\cvsection{RESEARCH EXPERIENCE}
+\cvsection{SELECTED RESEARCH PROJECTS}
 
 \begin{itemize}[leftmargin=11pt,label=\textbullet,itemsep=4pt,parsep=2pt]
-  \item \textbf{ML Systems}
+  \item \textbf{LLM Inference Systems}
     \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{CoSpec} (Sep 2023 \textendash\ Oct 2024)
+      \item \textbf{ELDR} \hfill \textit{arXiv 2026} \quad \href{https://arxiv.org/abs/2607.00466}{[Paper]}
         \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Efficient LLM serving system overcoming speculative decoding limitations in real-world scenarios, including high request rates and temperature sensitivity. It introduces Dynamic Colocation for smart GPU resource management across batch sizes and Selective Validation to minimize wasted computation and maintain accuracy.
+          \item Led the end-to-end design, implementation, and evaluation of ELDR, a vLLM-based expert-locality-aware decode router that uses prefill-derived expert signatures to reduce median time per output token by 5.9--13.9\% on PD-disaggregated MoE deployments of up to 40 GPUs without changing model outputs.
         \end{itemize}
 
-      \item \textbf{Hierarchical Drafting} (Aug 2024 \textendash\ Oct 2024)
+    \end{itemize}
+
+  \item \textbf{Energy-Efficient AI Systems}
+    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
+      \item \textbf{BEAM} \hfill \textit{MLSys 2026} \quad \href{https://proceedings.mlsys.org/paper_files/paper/2026/hash/eb3c42ddfa16d8421fdba13528107cc1-Abstract-Conference.html}{[Paper]}
         \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item A novel lossless speculative decoding drafting approach that organizes various token sources into multiple databases in a hierarchical framework based on temporal locality. Ensures consistent, robust inference acceleration across diverse tasks and model sizes.
+          \item Contributed technical feedback and manuscript development for a controller that jointly tunes GPU frequency, chunk size, and microbatch count to meet per-request SLOs, reducing GPU energy by up to 51\% over vLLM.
         \end{itemize}
 
-      \item \textbf{EnvPipe} (May 2022 \textendash\ Jan 2023)
+      \item \textbf{EnvPipe} \hfill \textit{USENIX ATC 2023} \quad \href{https://www.usenix.org/conference/atc23/presentation/choi}{[Paper]} \href{https://github.com/casys-kaist/EnvPipe}{[Code]}
         \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Designed and implemented a framework for training large language models that significantly reduces energy consumption while maintaining minimal performance degradation.
-          \item Optimized pipeline parallelism by strategically scheduling bubbles and selectively lowering SM frequency.
-          \item Developed the system on top of DeepSpeed (\href{https://github.com/casys-kaist/EnvPipe}{https://github.com/casys-kaist/EnvPipe}).
+          \item Designed and implemented a DeepSpeed-based pipeline-parallel training framework that reduces energy consumption by lowering GPU SM frequency during pipeline bubbles while limiting performance degradation.
         \end{itemize}
     \end{itemize}
 
-  \item \textbf{Memory Systems}
+  \item \textbf{GPU Memory Systems}
     \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{HUVM} (Mar 2021 \textendash\ Jan 2022)
+      \item \textbf{HUVM} \hfill \textit{USENIX ATC 2022} \quad \href{https://www.usenix.org/conference/atc22/presentation/choi-sangjin}{[Paper]} \href{https://github.com/casys-kaist/HUVM}{[Code]}
         \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Developed Hierarchical Unified Virtual Memory (HUVM), a system that creates the illusion of a unified virtual memory space for GPUs by utilizing temporarily idle memory of neighboring GPUs.
-          \item Designed and implemented a novel memory manager, memHarvester, to efficiently harvest and utilize neighboring GPUs' memory via NVLink.
-          \item Built a prototype system based on NVIDIA's driver (\href{https://github.com/casys-kaist/HUVM}{https://github.com/casys-kaist/HUVM}).
-        \end{itemize}
-
-      \item \textbf{TribuOS} (Sep 2019 \textendash\ Jun 2020)
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Contributed to the development of a disaggregated memory system designed for high availability.
-          \item Implemented a memory server with support for 1 GB huge pages and an RDMA RPC recovery mechanism to enable faster recovery times.
+          \item Designed and implemented Hierarchical Unified Virtual Memory and its memHarvester memory manager, modifying NVIDIA's driver to harvest and access idle memory on neighboring GPUs over NVLink and expand the memory available to each GPU.
         \end{itemize}
     \end{itemize}
 
-  \item \textbf{AI with FPGA}
+  \item \textbf{Systems for Emerging AI Hardware}
     \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{PRIMO} (Oct 2022 \textendash\ May 2023)
+      \item \textbf{PRIMO} \hfill \textit{IEEE/ACM ICCAD 2023} \quad \href{https://ieeexplore.ieee.org/document/10323637}{[Paper]}
         \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Participated in developing a full-stack processing-in-DRAM emulation framework named PRIMO, the first emulation framework that can model and analyze DRAM-PIM for end-to-end ML inference.
-          \item Collaborated with compiler and FPGA teams to implement a PIM driver that enables efficient execution of PIM operations by providing seamless integration between the software and hardware components.
-        \end{itemize}
-
-      \item \textbf{Accelerating DNN with FPGA} (Dec 2020 \textendash\ Dec 2021)
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Participated in developing an acceleration framework for DNNs using FPGA.
-          \item Implemented functionality on top of the Xilinx driver to support encoding layers as FPGA instructions and quantizing models to an 8-bit fixed-point format to accelerate model inference.
+          \item Implemented PRIMO's PIM driver stack as the software interface connecting the PIM compiler to the FPGA-based DRAM-PIM emulator, encoding PIM operations into hardware-ISA binaries and transferring them through virtual-memory scatter-gather DMA.
         \end{itemize}
     \end{itemize}
 \end{itemize}
