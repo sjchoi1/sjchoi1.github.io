@@ -1,14 +1,18 @@
-# Minimal Theme
+# sjchoi1.github.io
 
-[Demo the Theme](https://orderedlist.com/minimal/)
+Personal academic homepage for Sangjin Choi.
 
-This is the raw HTML and styles that are used for the *minimal* theme on [GitHub Pages](http://pages.github.com/).
+## Curriculum Vitae
 
-Syntax highlighting is provided on GitHub Pages by [Pygments](http://pygments.org).
+The LaTeX source and build instructions are in [`cv/`](cv/). Build the public PDF from the repository root with:
 
-# License
+```powershell
+.\cv\build.cmd
+```
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
+## Theme license
+
+The site is based on the [Minimal theme](https://orderedlist.com/minimal/), licensed under the [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/).
 
 
 

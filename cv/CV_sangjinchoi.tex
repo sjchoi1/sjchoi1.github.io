@@ -1,0 +1,157 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,vmargin=1in,hmargin=0.65in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.4\baselineskip plus 2pt}
+\setlength{\parindent}{12pt}
+
+\titlespacing*{\subsection}{0pt}{10pt}{2pt}
+
+\definecolor{cvgray}{rgb}{0.4,0.4,0.4}
+
+\hypersetup{
+  pdftitle={Curriculum Vitae - Sangjin Choi},
+  pdfauthor={Sangjin Choi}
+}
+
+\newcommand{\cvsection}[1]{
+  \subsection*{#1}
+  \vspace{1.5mm}
+  \hrule
+  \vspace{0.5mm}
+}
+
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{cvgray}{\itshape CV -- Sangjin Choi}}
+\fancyhead[R]{\textcolor{cvgray}{\thepage/\pageref*{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+  {\LARGE\bfseries Sangjin Choi}\\
+  \vspace{0.1cm}
+  \textit{Postdoctoral Researcher}\\
+  CASYS Lab, Information \& Electronics Research Institute, KAIST\\
+  \email{sjchoi@casys.kaist.ac.kr}
+\end{center}
+
+\vspace{0.1cm}
+
+\cvsection{RESEARCH STATEMENT}
+
+I build cost-driven AI infrastructure with a deep understanding of hardware, systems software, and AI workloads.
+
+\cvsection{EDUCATION}
+
+\noindent
+\textbf{Korea Advanced Institute of Science and Technology (KAIST)} \hfill Daejeon, South Korea\\
+\hspace*{12pt}Ph.D. in School of Computing \hfill 2021-09 \textendash\ 2026-08\\
+\hspace*{12pt}Advisor: Youngjin Kwon, CASYS Lab
+
+\noindent
+\textbf{Korea Advanced Institute of Science and Technology (KAIST)} \hfill Daejeon, South Korea\\
+\hspace*{12pt}Master of Science in School of Computing \hfill 2019-09 \textendash\ 2021-08\\
+\hspace*{12pt}Advisor: Youngjin Kwon, CASYS Lab
+
+\noindent
+\textbf{Korea Advanced Institute of Science and Technology (KAIST)} \hfill Daejeon, South Korea\\
+\hspace*{12pt}Bachelor of Science in School of Computing \hfill 2015-03 \textendash\ 2019-08
+
+\cvsection{WORK EXPERIENCE}
+
+\noindent
+\textbf{Korea Advanced Institute of Science and Technology (KAIST)} \hfill Daejeon, South Korea\\
+\hspace*{12pt}Postdoctoral Researcher, Information \& Electronics Research Institute \hfill 2026-09 \textendash\ Present
+
+\noindent
+\textbf{Microsoft Research Asia} \hfill Vancouver, Canada\\
+\hspace*{12pt}Research Intern, Vancouver Lab \hfill 2026-03 \textendash\ 2026-05
+
+\noindent
+\textbf{Microsoft Research Asia} \hfill Beijing, China\\
+\hspace*{12pt}Research Intern, Systems and Networking Research Group \hfill 2025-07 \textendash\ 2026-01
+
+\cvsection{PUBLICATIONS}
+
+\begin{enumerate}[label={[\arabic*]},leftmargin=*,labelsep=0.6em,itemsep=3pt,parsep=0pt,topsep=0pt]
+  \item \textbf{[arXiv 2026]} \textbf{Sangjin Choi}, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, and Peng Cheng. ``ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving.''
+  \item \textbf{[MLSys 2026]} Hyunjae Lee, \textbf{Sangjin Choi}, Seungjae Lim, and Youngjin Kwon. ``BEAM: Joint Resource--Power Optimization for Energy-Efficient LLM Inference under SLO Constraints.''
+  \item \textbf{[ACM EuroSys 2026]} Changjun Lee, \textbf{Sangjin Choi}, and Youngjin Kwon. ``MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant Cloud.''
+  \item \textbf{[Findings of NAACL 2025]} Sukmin Cho, \textbf{Sangjin Choi}, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun Song, Jong C. Park, and Youngjin Kwon. ``Lossless Acceleration of Large Language Models with Hierarchical Drafting based on Temporal Locality in Speculative Decoding.''
+  \item \textbf{[IEEE/ACM ICCAD 2023]} Jehoon Heo, Yongwon Shin, \textbf{Sangjin Choi}, Sungwoong Yune, Junghoon Kim, Youngjin Kwon, Hyojin Sung, and Joo-Young Kim. ``PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads.''
+  \item \textbf{[USENIX ATC 2023]} \textbf{Sangjin Choi}, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, and Youngjin Kwon. ``EnvPipe: Performance-preserving DNN Training Framework for Saving Energy.''
+  \item \textbf{[USENIX ATC 2022]} \textbf{Sangjin Choi}\textsuperscript{*}, Taeksoo Kim\textsuperscript{*}, Jinwoo Jeong, Rachata Ausavarungnirun, Myeongjae Jeon, Youngjin Kwon, and Jeongseob Ahn. ``Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory.'' (\textsuperscript{*}Equal contribution.)
+\end{enumerate}
+
+\newpage
+
+\cvsection{RESEARCH EXPERIENCE}
+
+\begin{itemize}[leftmargin=11pt,label=\textbullet,itemsep=4pt,parsep=2pt]
+  \item \textbf{ML Systems}
+    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
+      \item \textbf{CoSpec} (Sep 2023 \textendash\ Oct 2024)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item Efficient LLM serving system overcoming speculative decoding limitations in real-world scenarios, including high request rates and temperature sensitivity. It introduces Dynamic Colocation for smart GPU resource management across batch sizes and Selective Validation to minimize wasted computation and maintain accuracy.
+        \end{itemize}
+
+      \item \textbf{Hierarchical Drafting} (Aug 2024 \textendash\ Oct 2024)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item A novel lossless speculative decoding drafting approach that organizes various token sources into multiple databases in a hierarchical framework based on temporal locality. Ensures consistent, robust inference acceleration across diverse tasks and model sizes.
+        \end{itemize}
+
+      \item \textbf{EnvPipe} (May 2022 \textendash\ Jan 2023)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item Designed and implemented a framework for training large language models that significantly reduces energy consumption while maintaining minimal performance degradation.
+          \item Optimized pipeline parallelism by strategically scheduling bubbles and selectively lowering SM frequency.
+          \item Developed the system on top of DeepSpeed (\href{https://github.com/casys-kaist/EnvPipe}{https://github.com/casys-kaist/EnvPipe}).
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{Memory Systems}
+    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
+      \item \textbf{HUVM} (Mar 2021 \textendash\ Jan 2022)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item Developed Hierarchical Unified Virtual Memory (HUVM), a system that creates the illusion of a unified virtual memory space for GPUs by utilizing temporarily idle memory of neighboring GPUs.
+          \item Designed and implemented a novel memory manager, memHarvester, to efficiently harvest and utilize neighboring GPUs' memory via NVLink.
+          \item Built a prototype system based on NVIDIA's driver (\href{https://github.com/casys-kaist/HUVM}{https://github.com/casys-kaist/HUVM}).
+        \end{itemize}
+
+      \item \textbf{TribuOS} (Sep 2019 \textendash\ Jun 2020)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item Contributed to the development of a disaggregated memory system designed for high availability.
+          \item Implemented a memory server with support for 1 GB huge pages and an RDMA RPC recovery mechanism to enable faster recovery times.
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{AI with FPGA}
+    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
+      \item \textbf{PRIMO} (Oct 2022 \textendash\ May 2023)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item Participated in developing a full-stack processing-in-DRAM emulation framework named PRIMO, the first emulation framework that can model and analyze DRAM-PIM for end-to-end ML inference.
+          \item Collaborated with compiler and FPGA teams to implement a PIM driver that enables efficient execution of PIM operations by providing seamless integration between the software and hardware components.
+        \end{itemize}
+
+      \item \textbf{Accelerating DNN with FPGA} (Dec 2020 \textendash\ Dec 2021)
+        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
+          \item Participated in developing an acceleration framework for DNNs using FPGA.
+          \item Implemented functionality on top of the Xilinx driver to support encoding layers as FPGA instructions and quantizing models to an 8-bit fixed-point format to accelerate model inference.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\label{LastPage}
+
+\end{document}
