@@ -50,7 +50,7 @@
       font-size: 16px;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
     }
 
     a {
@@ -67,10 +67,10 @@
 
     /* --- HEADER --- */
     header {
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.5rem;
       display: flex;
       align-items: center;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .profile-photo {
@@ -98,7 +98,7 @@
     .role {
       color: var(--text-light);
       font-size: 1.05rem;
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.7rem;
     }
 
     .bio {
@@ -106,16 +106,16 @@
     }
 
     .bio + .bio {
-      margin-top: 0.8rem;
+      margin-top: 0.6rem;
     }
 
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1.25rem;
       font-size: 0.95rem;
       color: var(--text-light);
-      margin-top: 1.3rem;
+      margin-top: 1rem;
     }
 
     .contact-links span {
@@ -124,7 +124,7 @@
 
     /* --- SECTIONS --- */
     section {
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.75rem;
     }
 
     h2 {
@@ -133,8 +133,8 @@
       letter-spacing: 0.1em;
       color: var(--text-light);
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.15rem;
       font-weight: 600;
     }
 
@@ -142,8 +142,8 @@
     .tags-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1rem;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
     }
 
     .tag {
@@ -151,7 +151,7 @@
       color: var(--tag-text);
       font-size: 0.85rem;
       font-weight: 600;
-      padding: 0.3rem 0.8rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 4px;
       cursor: default;
     }
@@ -163,9 +163,12 @@
 
     .experience-item {
       display: flex;
-      margin-bottom: 2rem;
-      gap: 3rem;
-      /* gap increased to separate date and text */
+      margin-bottom: 1.35rem;
+      gap: 2.5rem;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
     }
 
     .date {
@@ -187,17 +190,17 @@
     .detail-note {
       font-size: 0.9rem;
       color: var(--text-light);
-      margin-top: 0.2rem;
+      margin-top: 0.1rem;
     }
 
     /* --- PUBLICATIONS LAYOUT --- */
     .pub-item {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.8rem;
       display: grid;
       grid-template-columns: 140px 1fr;
-      gap: 1.5rem;
+      gap: 1.25rem;
       align-items: baseline;
-      padding: 1rem;
+      padding: 0.75rem 1rem;
       border-radius: 6px;
     }
 
@@ -225,7 +228,7 @@
     .pub-authors {
       font-size: 0.95rem;
       color: var(--text-light);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
     }
 
     .me {
@@ -249,10 +252,15 @@
 
     /* --- RESPONSIVE --- */
     @media (max-width: 600px) {
+      body {
+        padding: 2rem 1.25rem;
+      }
+
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 2rem;
       }
 
       .profile-photo {
@@ -278,7 +286,7 @@
       .pub-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
-        padding: 1rem 0.5rem;
+        padding: 0.65rem 0.25rem;
       }
 
       .pub-venue {
