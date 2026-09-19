@@ -1,0 +1,324 @@
+:root {
+  color-scheme: light;
+  --ink: #20252b;
+  --muted: #626b75;
+  --accent: #265c86;
+  --line: #e5e8eb;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 40px 80px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p, ul {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-color: #b8cad8;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+header {
+  margin-bottom: 52px;
+}
+
+.identity {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 144px;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.role {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.affiliation {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.profile-photo {
+  display: block;
+  width: 144px;
+  height: 174px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 5px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 18px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+
+.bio + .bio {
+  margin-top: 12px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.tag {
+  position: relative;
+}
+
+.tag:not(:last-child)::after {
+  position: absolute;
+  right: -12px;
+  color: #a1a8af;
+  content: "·";
+}
+
+section + section {
+  margin-top: 44px;
+}
+
+h2 {
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.experience-item + .experience-item {
+  margin-top: 20px;
+}
+
+.date {
+  padding-top: 2px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.exp-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-note {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 24px;
+  align-items: baseline;
+}
+
+.pub-item + .pub-item {
+  margin-top: 28px;
+}
+
+.pub-venue {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.pub-title {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.pub-authors {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.me {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.pub-links {
+  margin-top: 5px;
+  font-size: 0.875rem;
+}
+
+.pub-links a {
+  display: inline-block;
+  min-height: 28px;
+}
+
+@media (max-width: 680px) {
+  body {
+    padding: 36px 24px 56px;
+  }
+
+  .identity {
+    grid-template-columns: minmax(0, 1fr) 104px;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  .profile-photo {
+    width: 104px;
+    height: 130px;
+  }
+
+  .affiliation {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  .contact-links {
+    margin-top: 12px;
+  }
+
+  header {
+    margin-bottom: 36px;
+  }
+
+  section + section {
+    margin-top: 36px;
+  }
+
+  .experience-item, .pub-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  .pub-item + .pub-item {
+    margin-top: 26px;
+  }
+
+  .date {
+    padding: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .identity {
+    grid-template-columns: minmax(0, 1fr) 80px;
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  .profile-photo {
+    width: 80px;
+    height: 100px;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .experience-item, .pub-item {
+    break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+}

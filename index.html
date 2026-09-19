@@ -16,292 +16,28 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    /* --- RESET & BASICS --- */
-    :root {
-      --bg-color: #ffffff;
-      --text-main: #111111;
-      --text-light: #555555;
-      --accent: #2c5aa0;
-      /* Academic Blue */
-
-      /* Sky blue tag colors */
-      --tag-bg: #e0f2fe;
-      --tag-text: #0369a1;
-
-      --border: #eaeaea;
-      --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --font-mono: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-      font-size: 16px;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    a {
-      color: var(--text-main);
-      text-decoration: none;
-      border-bottom: 1px solid #ccc;
-      transition: all 0.2s ease;
-    }
-
-    a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    /* --- HEADER --- */
-    header {
-      margin-bottom: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .profile-photo {
-      width: 190px;
-      height: 230px;
-      object-fit: cover;
-      object-position: center 28%;
-      border-radius: 12px;
-      flex-shrink: 0;
-    }
-
-    .header-text {
-      flex: 1;
-    }
-
-    h1 {
-      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.1;
-      margin-bottom: 0.25rem;
-    }
-
-    .role {
-      color: var(--text-light);
-      font-size: 1.05rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .bio {
-      margin-bottom: 0;
-    }
-
-    .bio + .bio {
-      margin-top: 0.6rem;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      font-size: 0.95rem;
-      color: var(--text-light);
-      margin-top: 1rem;
-    }
-
-    /* --- SECTIONS --- */
-    section {
-      margin-bottom: 2.75rem;
-    }
-
-    h2 {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-light);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.4rem;
-      margin-bottom: 1.15rem;
-      font-weight: 600;
-    }
-
-    /* --- TAGS --- */
-    .tags-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.8rem;
-    }
-
-    .tag {
-      background-color: var(--tag-bg);
-      color: var(--tag-text);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 0.25rem 0.7rem;
-      border-radius: 4px;
-      cursor: default;
-    }
-
-    /* --- LISTS --- */
-    ul {
-      list-style: none;
-    }
-
-    .experience-item {
-      display: flex;
-      margin-bottom: 1.35rem;
-      gap: 2.5rem;
-    }
-
-    .experience-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .date {
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      color: var(--text-light);
-      width: 190px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      font-weight: 600;
-      padding-top: 0.1rem;
-    }
-
-    .exp-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .detail-note {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-top: 0.1rem;
-    }
-
-    /* --- PUBLICATIONS LAYOUT --- */
-    .pub-item {
-      margin-bottom: 0.8rem;
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 1.25rem;
-      align-items: baseline;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-    }
-
-    .pub-venue {
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      font-weight: 900;
-      color: #000;
-      text-align: right;
-    }
-
-    .pub-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .pub-title {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.3rem;
-      line-height: 1.4;
-      color: #000;
-    }
-
-    .pub-authors {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      margin-bottom: 0.35rem;
-    }
-
-    .me {
-      color: var(--text-main);
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-color: #ccc;
-    }
-
-    .pub-links a {
-      font-size: 0.85rem;
-      margin-right: 1rem;
-      color: var(--text-light);
-      border-bottom: 1px solid transparent;
-    }
-
-    .pub-links a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 600px) {
-      body {
-        padding: 2rem 1.25rem;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .profile-photo {
-        width: 140px;
-        height: 170px;
-      }
-
-      h1 {
-        font-size: 2.25rem;
-      }
-
-      .experience-item {
-        flex-direction: column;
-        gap: 0.2rem;
-      }
-
-      .date {
-        width: 100%;
-        margin-bottom: 0.25rem;
-        white-space: normal;
-      }
-
-      .pub-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-        padding: 0.65rem 0.25rem;
-      }
-
-      .pub-venue {
-        text-align: left;
-        margin-bottom: 0.25rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="stylesheets/site.css">
 </head>
 
 <body>
 
   <header>
-    <img class="profile-photo" src="img/profile_2_crop.jpg" alt="Sangjin Choi">
+    <div class="identity">
+      <div class="identity-text">
+        <h1>Sangjin Choi</h1>
+        <p class="role">Postdoctoral Researcher</p>
+        <p class="affiliation">Information &amp; Electronics Research Institute, KAIST</p>
+        <div class="contact-links">
+          <a href="cv/output/pdf/CV_sangjinchoi.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </div>
+      </div>
+      <img class="profile-photo" src="img/profile_2_crop.jpg" alt="Sangjin Choi" width="144" height="174">
+    </div>
 
-    <div class="header-text">
-      <h1>Sangjin Choi</h1>
-      <p class="role">Postdoctoral Researcher, Information &amp; Electronics Research Institute, KAIST</p>
-
+    <div class="intro">
       <p class="bio">
         I am a postdoctoral researcher in the <a href="https://casyslab.kaist.ac.kr/">CASYS Lab</a> at KAIST's Information &amp; Electronics Research Institute. I build cost-driven AI infrastructure with a deep understanding of hardware, systems software, and AI workloads.
       </p>
@@ -316,182 +52,165 @@
         <span class="tag">Energy-Efficient ML</span>
         <span class="tag">GPU Memory Management</span>
       </div>
-
-      <div class="contact-links">
-        <a href="cv/output/pdf/CV_sangjinchoi.pdf" target="_blank">CV</a>
-        <a href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&hl=ko" target="_blank">Google Scholar</a>
-      </div>
     </div>
   </header>
 
-  <section>
-    <h2>News</h2>
-    <ul>
-      <li class="experience-item">
-        <span class="date">Sep 2026</span>
-        <span>Started as a Postdoctoral Researcher at KAIST's Information &amp; Electronics Research Institute.</span>
-      </li>
-      <li class="experience-item">
-        <span class="date">Aug 2026</span>
-        <span>Graduated with my Ph.D. from KAIST.</span>
-      </li>
-    </ul>
-  </section>
+  <main>
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <ul>
+        <li class="experience-item">
+          <span class="date">Sep 2021 - Aug 2026</span>
+          <div class="exp-details">
+            <span><b>Ph.D.</b>, School of Computing, KAIST</span>
+            <span class="detail-note">Advisor: Youngjin Kwon</span>
+          </div>
+        </li>
+        <li class="experience-item">
+          <span class="date">Sep 2019 - Aug 2021</span>
+          <div class="exp-details">
+            <span><b>M.S.</b>, School of Computing, KAIST</span>
+            <span class="detail-note">Advisor: Youngjin Kwon</span>
+          </div>
+        </li>
+        <li class="experience-item">
+          <span class="date">Mar 2015 - Aug 2019</span>
+          <span><b>B.S.</b>, School of Computing, KAIST</span>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li class="experience-item">
-        <span class="date">Sep 2021 - Aug 2026</span>
-        <div class="exp-details">
-          <span><b>Ph.D.</b>, School of Computing, KAIST</span>
-          <span class="detail-note">Advisor: Youngjin Kwon</span>
-        </div>
-      </li>
-      <li class="experience-item">
-        <span class="date">Sep 2019 - Aug 2021</span>
-        <div class="exp-details">
-          <span><b>M.S.</b>, School of Computing, KAIST</span>
-          <span class="detail-note">Advisor: Youngjin Kwon</span>
-        </div>
-      </li>
-      <li class="experience-item">
-        <span class="date">Mar 2015 - Aug 2019</span>
-        <span><b>B.S.</b>, School of Computing, KAIST</span>
-      </li>
-    </ul>
-  </section>
+    <section aria-labelledby="work-experience">
+      <h2 id="work-experience">Work Experience</h2>
+      <ul>
+        <li class="experience-item">
+          <span class="date">Sep 2026 - Present</span>
+          <div class="exp-details">
+            <span><b>Postdoctoral Researcher</b>, Information &amp; Electronics Research Institute</span>
+            <span>CASYS Lab, KAIST</span>
+          </div>
+        </li>
+        <li class="experience-item">
+          <span class="date">Mar 2026 - May 2026</span>
+          <div class="exp-details">
+            <span><b>Research Intern</b>, Vancouver Lab</span>
+            <span>Microsoft Research Asia</span>
+            <span class="detail-note">Mentor: Yifan Xiong</span>
+          </div>
+        </li>
+        <li class="experience-item">
+          <span class="date">Jul 2025 - Jan 2026</span>
+          <div class="exp-details">
+            <span><b>Research Intern</b>, Systems and Networking Research Group</span>
+            <span>Microsoft Research Asia</span>
+            <span class="detail-note">Mentors: Yifan Xiong and Ziyue Yang</span>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Work Experience</h2>
-    <ul>
-      <li class="experience-item">
-        <span class="date">Sep 2026 - Present</span>
-        <div class="exp-details">
-          <span><b>Postdoctoral Researcher</b>, Information &amp; Electronics Research Institute</span>
-          <span>CASYS Lab, KAIST</span>
-        </div>
-      </li>
-      <li class="experience-item">
-        <span class="date">Mar 2026 - May 2026</span>
-        <div class="exp-details">
-          <span><b>Research Intern</b>, Vancouver Lab</span>
-          <span>Microsoft Research Asia</span>
-          <span class="detail-note">Mentor: Yifan Xiong</span>
-        </div>
-      </li>
-      <li class="experience-item">
-        <span class="date">Jul 2025 - Jan 2026</span>
-        <div class="exp-details">
-          <span><b>Research Intern</b>, Systems and Networking Research Group</span>
-          <span>Microsoft Research Asia</span>
-          <span class="detail-note">Mentors: Yifan Xiong and Ziyue Yang</span>
-        </div>
-      </li>
-    </ul>
-  </section>
+    <section aria-labelledby="publications">
+      <h2 id="publications">Publications</h2>
 
-  <section>
-    <h2>Publications</h2>
-
-    <div class="pub-item">
-      <div class="pub-venue">arXiv '26</div>
-      <div class="pub-details">
-        <div class="pub-title">ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</div>
-        <div class="pub-authors">
-          <span class="me">Sangjin Choi</span>, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng
-        </div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2607.00466" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">ACM ATC '26</div>
+        <div class="pub-details">
+          <div class="pub-title">ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</div>
+          <div class="pub-authors">
+            <span class="me">Sangjin Choi</span>, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2607.00466" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="pub-item">
-      <div class="pub-venue">MLSys '26</div>
-      <div class="pub-details">
-        <div class="pub-title">BEAM: Joint Resource–Power Optimization for Energy-Efficient LLM Inference under SLO Constraints</div>
-        <div class="pub-authors">
-          Hyunjae Lee, <span class="me">Sangjin Choi</span>, Seungjae Lim, Youngjin Kwon
-        </div>
-        <div class="pub-links">
-          <a href="https://proceedings.mlsys.org/paper_files/paper/2026/hash/eb3c42ddfa16d8421fdba13528107cc1-Abstract-Conference.html" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">MLSys '26</div>
+        <div class="pub-details">
+          <div class="pub-title">BEAM: Joint Resource–Power Optimization for Energy-Efficient LLM Inference under SLO Constraints</div>
+          <div class="pub-authors">
+            Hyunjae Lee, <span class="me">Sangjin Choi</span>, Seungjae Lim, Youngjin Kwon
+          </div>
+          <div class="pub-links">
+            <a href="https://proceedings.mlsys.org/paper_files/paper/2026/hash/eb3c42ddfa16d8421fdba13528107cc1-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="pub-item">
-      <div class="pub-venue">EuroSys '26</div>
-      <div class="pub-details">
-        <div class="pub-title">MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant Cloud
-        </div>
-        <div class="pub-authors">
-          Changjun Lee, <span class="me">Sangjin Choi</span>, Youngjin Kwon
-        </div>
-        <div class="pub-links">
-          <a href="https://dl.acm.org/doi/abs/10.1145/3767295.3769371" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">EuroSys '26</div>
+        <div class="pub-details">
+          <div class="pub-title">MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant Cloud
+          </div>
+          <div class="pub-authors">
+            Changjun Lee, <span class="me">Sangjin Choi</span>, Youngjin Kwon
+          </div>
+          <div class="pub-links">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3767295.3769371" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="pub-item">
-      <div class="pub-venue">Findings of NAACL '25</div>
-      <div class="pub-details">
-        <div class="pub-title">Lossless Acceleration of Large Language Models with Hierarchical Drafting based on
-          Temporal Locality in Speculative Decoding</div>
-        <div class="pub-authors">
-          Sukmin Cho, <span class="me">Sangjin Choi</span>, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun
-          Song, Jong C. Park, Youngjin Kwon
-        </div>
-        <div class="pub-links">
-          <a href="https://aclanthology.org/2025.findings-naacl.216/" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">Findings of NAACL '25</div>
+        <div class="pub-details">
+          <div class="pub-title">Lossless Acceleration of Large Language Models with Hierarchical Drafting based on
+            Temporal Locality in Speculative Decoding</div>
+          <div class="pub-authors">
+            Sukmin Cho, <span class="me">Sangjin Choi</span>, Taeho Hwang, Jeongyeon Seo, Soyeong Jeong, Huije Lee, Hoyun
+            Song, Jong C. Park, Youngjin Kwon
+          </div>
+          <div class="pub-links">
+            <a href="https://aclanthology.org/2025.findings-naacl.216/" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="pub-item">
-      <div class="pub-venue">ICCAD '23</div>
-      <div class="pub-details">
-        <div class="pub-title">PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads
-        </div>
-        <div class="pub-authors">
-          Jaehoon Heo, Yongwon Shin, <span class="me">Sangjin Choi</span>, Sungwoong Yune, Jung-Hoon Kim, Hyojin Sung,
-          Youngjin Kwon, Joo-Young Kim
-        </div>
-        <div class="pub-links">
-          <a href="https://ieeexplore.ieee.org/document/10323637" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">ICCAD '23</div>
+        <div class="pub-details">
+          <div class="pub-title">PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads
+          </div>
+          <div class="pub-authors">
+            Jaehoon Heo, Yongwon Shin, <span class="me">Sangjin Choi</span>, Sungwoong Yune, Jung-Hoon Kim, Hyojin Sung,
+            Youngjin Kwon, Joo-Young Kim
+          </div>
+          <div class="pub-links">
+            <a href="https://ieeexplore.ieee.org/document/10323637" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="pub-item">
-      <div class="pub-venue">USENIX ATC '23</div>
-      <div class="pub-details">
-        <div class="pub-title">EnvPipe: Performance-preserving DNN Training Framework for Saving Energy</div>
-        <div class="pub-authors">
-          <span class="me">Sangjin Choi</span>, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, Youngjin Kwon
-        </div>
-        <div class="pub-links">
-          <a href="https://www.usenix.org/conference/atc23/presentation/choi" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">USENIX ATC '23</div>
+        <div class="pub-details">
+          <div class="pub-title">EnvPipe: Performance-preserving DNN Training Framework for Saving Energy</div>
+          <div class="pub-authors">
+            <span class="me">Sangjin Choi</span>, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, Youngjin Kwon
+          </div>
+          <div class="pub-links">
+            <a href="https://www.usenix.org/conference/atc23/presentation/choi" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="pub-item">
-      <div class="pub-venue">USENIX ATC '22</div>
-      <div class="pub-details">
-        <div class="pub-title">Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory</div>
-        <div class="pub-authors">
-          <span class="me">Sangjin Choi*</span>, Taeksoo Kim*, Jinwoo Jeong, Rachata Ausavarungnirun, Myeongjae Jeon,
-          Youngjin Kwon, Jeongseob Ahn (*equal contribution)
-        </div>
-        <div class="pub-links">
-          <a href="https://www.usenix.org/conference/atc22/presentation/choi-sangjin" target="_blank">Paper</a>
+      <div class="pub-item">
+        <div class="pub-venue">USENIX ATC '22</div>
+        <div class="pub-details">
+          <div class="pub-title">Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory</div>
+          <div class="pub-authors">
+            <span class="me">Sangjin Choi*</span>, Taeksoo Kim*, Jinwoo Jeong, Rachata Ausavarungnirun, Myeongjae Jeon,
+            Youngjin Kwon, Jeongseob Ahn (*equal contribution)
+          </div>
+          <div class="pub-links">
+            <a href="https://www.usenix.org/conference/atc22/presentation/choi-sangjin" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
+  </main>
 
 </body>
 
