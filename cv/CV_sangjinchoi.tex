@@ -1,9 +1,7 @@
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[a4paper,vmargin=1in,hmargin=0.65in]{geometry}
-\usepackage{fancyhdr}
 \usepackage{enumitem}
-\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 
@@ -11,8 +9,6 @@
 \setlength{\parindent}{12pt}
 
 \titlespacing*{\subsection}{0pt}{10pt}{2pt}
-
-\definecolor{cvgray}{rgb}{0.4,0.4,0.4}
 
 \hypersetup{
   pdftitle={Curriculum Vitae - Sangjin Choi},
@@ -27,13 +23,6 @@
 }
 
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\textcolor{cvgray}{\itshape CV -- Sangjin Choi}}
-\fancyhead[R]{\textcolor{cvgray}{\thepage/\pageref*{LastPage}}}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
 
 \begin{document}
 
@@ -94,54 +83,5 @@ I build cost-efficient AI infrastructure by designing systems software around ha
   \item \textbf{[USENIX ATC 2023]} \textbf{Sangjin Choi}, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, and Youngjin Kwon. ``EnvPipe: Performance-preserving DNN Training Framework for Saving Energy.''
   \item \textbf{[USENIX ATC 2022]} \textbf{Sangjin Choi}\textsuperscript{*}, Taeksoo Kim\textsuperscript{*}, Jinwoo Jeong, Rachata Ausavarungnirun, Myeongjae Jeon, Youngjin Kwon, and Jeongseob Ahn. ``Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory.'' (\textsuperscript{*}Equal contribution.)
 \end{enumerate}
-
-\newpage
-
-\cvsection{SELECTED RESEARCH PROJECTS}
-
-\begin{itemize}[leftmargin=11pt,label=\textbullet,itemsep=4pt,parsep=2pt]
-  \item \textbf{LLM Inference Systems}
-    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{ELDR} \hfill \textit{ACM ATC 2026} \quad \href{https://arxiv.org/abs/2607.00466}{[Paper]}
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Led the end-to-end design, implementation, and evaluation of ELDR, a vLLM-based expert-locality-aware decode router that uses prefill-derived expert signatures to reduce median time per output token by 5.9--13.9\% on PD-disaggregated MoE deployments of up to 40 GPUs without changing model outputs.
-        \end{itemize}
-
-    \end{itemize}
-
-  \item \textbf{Energy-Efficient AI Systems}
-    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{BEAM} \hfill \textit{MLSys 2026} \quad \href{https://proceedings.mlsys.org/paper_files/paper/2026/hash/eb3c42ddfa16d8421fdba13528107cc1-Abstract-Conference.html}{[Paper]}
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Contributed technical feedback and manuscript development for a controller that jointly tunes GPU frequency, chunk size, and microbatch count to meet per-request SLOs, reducing GPU energy by up to 51\% over vLLM.
-        \end{itemize}
-
-      \item \textbf{EnvPipe} \hfill \textit{USENIX ATC 2023} \quad \href{https://www.usenix.org/conference/atc23/presentation/choi}{[Paper]}
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Designed and implemented a DeepSpeed-based pipeline-parallel training framework that reduces energy consumption by lowering GPU SM frequency during pipeline bubbles while limiting performance degradation.
-        \end{itemize}
-    \end{itemize}
-
-  \item \textbf{GPU Memory Systems}
-    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{HUVM} \hfill \textit{USENIX ATC 2022} \quad \href{https://www.usenix.org/conference/atc22/presentation/choi-sangjin}{[Paper]}
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Designed and implemented Hierarchical Unified Virtual Memory and its memHarvester memory manager, modifying NVIDIA's driver to harvest and access idle memory on neighboring GPUs over NVLink and expand the memory available to each GPU.
-        \end{itemize}
-    \end{itemize}
-
-  \item \textbf{Systems for Emerging AI Hardware}
-    \begin{itemize}[leftmargin=0pt,label={},labelsep=0pt,itemsep=2pt,parsep=0pt]
-      \item \textbf{PRIMO} \hfill \textit{IEEE/ACM ICCAD 2023} \quad \href{https://ieeexplore.ieee.org/document/10323637}{[Paper]}
-        \begin{itemize}[label=--,itemsep=0pt,parsep=0pt]
-          \item Implemented PRIMO's PIM driver stack as the software interface connecting the PIM compiler to the FPGA-based DRAM-PIM emulator, encoding PIM operations into hardware-ISA binaries and transferring them through virtual-memory scatter-gather DMA.
-        \end{itemize}
-    \end{itemize}
-\end{itemize}
-
-\vfill
-\noindent\hfill{\small\textcolor{cvgray}{Last updated: September 2026}}
-
-\label{LastPage}
 
 \end{document}
