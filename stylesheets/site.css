@@ -4,6 +4,7 @@
   --muted: #59636e;
   --accent: #265c86;
   --line: #e5e8eb;
+  --metadata-column: 256px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -151,7 +152,7 @@ ul {
 
 .experience-item {
   display: grid;
-  grid-template-columns: 172px minmax(0, 1fr);
+  grid-template-columns: var(--metadata-column) minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -184,7 +185,7 @@ b, strong {
 
 .pub-item {
   display: grid;
-  grid-template-columns: 256px minmax(0, 1fr);
+  grid-template-columns: var(--metadata-column) minmax(0, 1fr);
   column-gap: 24px;
   align-items: start;
 }
@@ -254,6 +255,13 @@ b, strong {
   color: var(--muted);
   font-size: 0.875rem;
   line-height: 1.7;
+}
+
+.pub-note {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.6;
 }
 
 .me {
@@ -377,7 +385,8 @@ b, strong {
     margin-bottom: 0;
   }
 
-  .pub-authors {
+  .pub-authors,
+  .pub-note {
     order: 2;
   }
 
