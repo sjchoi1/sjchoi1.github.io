@@ -106,6 +106,10 @@ h1 {
   min-height: 28px;
 }
 
+.bio {
+  text-wrap: pretty;
+}
+
 .bio + .bio {
   margin-top: 12px;
 }
