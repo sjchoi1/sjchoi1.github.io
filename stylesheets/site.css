@@ -200,6 +200,15 @@ b, strong {
   line-height: 1.6;
 }
 
+.pub-acceptance {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 .pub-title {
   margin-bottom: 6px;
   font-size: 1rem;
@@ -218,7 +227,19 @@ b, strong {
   font-weight: 700;
 }
 
+.pub-resources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin-top: 6px;
+}
+
 .pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
   margin-top: 5px;
   font-size: 0.875rem;
 }
@@ -226,6 +247,29 @@ b, strong {
 .pub-links a {
   display: inline-block;
   min-height: 28px;
+}
+
+.pub-resources .pub-links {
+  margin-top: 0;
+}
+
+.pub-badges {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pub-badges-label {
+  margin-right: 3px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.pub-badges img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .site-footer {
