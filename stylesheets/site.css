@@ -243,11 +243,6 @@ b, strong {
   line-height: 1.5;
 }
 
-.pub-role-primary {
-  color: var(--accent);
-  font-weight: 700;
-}
-
 .pub-title {
   margin-bottom: 6px;
   font-size: 1rem;
