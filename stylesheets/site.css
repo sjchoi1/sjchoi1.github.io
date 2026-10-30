@@ -107,7 +107,7 @@ h1 {
 }
 
 .bio {
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .bio + .bio {
@@ -117,22 +117,19 @@ h1 {
 .tags-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 20px;
+  gap: 8px;
   margin-top: 20px;
   color: var(--muted);
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .tag {
-  position: relative;
-}
-
-.tag:not(:last-child)::after {
-  position: absolute;
-  right: -12px;
-  color: #a1a8af;
-  content: "·";
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #f8fafb;
+  white-space: nowrap;
 }
 
 section + section {
