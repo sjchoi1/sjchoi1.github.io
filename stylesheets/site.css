@@ -198,7 +198,9 @@ b, strong {
 }
 
 .pub-item + .pub-item {
-  margin-top: 28px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
 }
 
 .pub-sidebar {
@@ -235,15 +237,15 @@ b, strong {
 .pub-role {
   display: block;
   margin-top: 0;
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 400;
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
   line-height: 1.5;
 }
 
 .pub-role-primary {
-  color: var(--ink);
-  font-weight: 500;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .pub-title {
@@ -290,7 +292,7 @@ b, strong {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .pub-ae img {
@@ -399,7 +401,7 @@ b, strong {
   }
 
   .pub-item + .pub-item {
-    margin-top: 26px;
+    margin-top: 24px;
   }
 
   .date {
