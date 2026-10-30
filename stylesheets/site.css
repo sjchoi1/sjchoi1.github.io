@@ -185,12 +185,25 @@ b, strong {
 .pub-item {
   display: grid;
   grid-template-columns: 172px minmax(0, 1fr);
-  gap: 24px;
-  align-items: baseline;
+  column-gap: 24px;
+  align-items: start;
+}
+
+.pub-details {
+  display: contents;
+}
+
+.pub-details > * {
+  grid-column: 2;
 }
 
 .pub-item + .pub-item {
   margin-top: 28px;
+}
+
+.pub-sidebar {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .pub-venue {
@@ -198,6 +211,10 @@ b, strong {
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.6;
+}
+
+.pub-meta {
+  margin-top: 5px;
 }
 
 .pub-acceptance {
@@ -217,7 +234,7 @@ b, strong {
 
 .pub-role {
   display: block;
-  margin-top: 5px;
+  margin-top: 0;
   color: var(--ink);
   font-size: 0.75rem;
   font-weight: 500;
@@ -237,12 +254,6 @@ b, strong {
   line-height: 1.7;
 }
 
-.pub-summary {
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-size: 0.875rem;
-  line-height: 1.6;
-}
 
 .me {
   color: var(--ink);
@@ -272,8 +283,9 @@ b, strong {
 }
 
 .pub-ae {
+  margin-top: 8px;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   line-height: 1.6;
 }
 
@@ -335,9 +347,44 @@ b, strong {
     margin-top: 36px;
   }
 
-  .experience-item, .pub-item {
+  .experience-item {
     grid-template-columns: minmax(0, 1fr);
     gap: 4px;
+  }
+
+  .pub-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .pub-sidebar,
+  .pub-main {
+    display: contents;
+  }
+
+  .pub-title {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .pub-authors {
+    order: 2;
+  }
+
+  .pub-venue {
+    margin-bottom: 2px;
+  }
+
+  .pub-meta {
+    order: 3;
+    margin: 4px 0;
+  }
+
+  .pub-resources,
+  .pub-main > .pub-links {
+    order: 4;
   }
 
   .pub-item + .pub-item {
