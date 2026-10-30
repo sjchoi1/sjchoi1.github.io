@@ -184,7 +184,7 @@ b, strong {
 
 .pub-item {
   display: grid;
-  grid-template-columns: 172px minmax(0, 1fr);
+  grid-template-columns: 256px minmax(0, 1fr);
   column-gap: 24px;
   align-items: start;
 }
@@ -221,6 +221,7 @@ b, strong {
 
 .pub-acceptance {
   display: block;
+  white-space: nowrap;
   margin-top: 3px;
   color: var(--muted);
   font-size: 0.75rem;
@@ -229,8 +230,7 @@ b, strong {
 }
 
 .pub-count {
-  display: block;
-  margin-top: 1px;
+  display: inline;
   font-variant-numeric: tabular-nums;
 }
 
