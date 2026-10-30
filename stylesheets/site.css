@@ -209,6 +209,21 @@ b, strong {
   line-height: 1.5;
 }
 
+.pub-count {
+  display: block;
+  margin-top: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-role {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 .pub-title {
   margin-bottom: 6px;
   font-size: 1rem;
@@ -222,17 +237,20 @@ b, strong {
   line-height: 1.7;
 }
 
+.pub-summary {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
 .me {
   color: var(--ink);
   font-weight: 700;
 }
 
 .pub-resources {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 20px;
-  margin-top: 6px;
+  margin-top: 5px;
 }
 
 .pub-links {
@@ -253,23 +271,10 @@ b, strong {
   margin-top: 0;
 }
 
-.pub-badges {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.pub-badges-label {
-  margin-right: 3px;
+.pub-ae {
   color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.pub-badges img {
-  display: block;
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  font-size: 0.8125rem;
+  line-height: 1.6;
 }
 
 .site-footer {
@@ -288,9 +293,17 @@ b, strong {
 
   .identity {
     grid-template-columns: minmax(0, 1fr) 112px;
-    gap: 24px;
+    gap: 0 24px;
     align-items: start;
     margin-bottom: 24px;
+  }
+
+  .identity-text {
+    display: contents;
+  }
+
+  .identity h1, .identity .role, .identity .affiliation {
+    grid-column: 1;
   }
 
   h1 {
@@ -298,6 +311,8 @@ b, strong {
   }
 
   .profile-photo {
+    grid-column: 2;
+    grid-row: 1 / 4;
     width: 112px;
     height: 140px;
   }
@@ -308,6 +323,7 @@ b, strong {
   }
 
   .contact-links {
+    grid-column: 1 / -1;
     margin-top: 12px;
   }
 
@@ -341,7 +357,7 @@ b, strong {
 
   .identity {
     grid-template-columns: minmax(0, 1fr) 88px;
-    gap: 16px;
+    column-gap: 16px;
   }
 
   h1 {

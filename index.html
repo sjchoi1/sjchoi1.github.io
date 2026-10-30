@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="stylesheets/site.css?v=25bf466">
+  <link rel="stylesheet" href="stylesheets/site.css?v=d60046a">
 </head>
 
 <body>
@@ -27,8 +27,10 @@
         <p class="role">Postdoctoral Researcher</p>
         <p class="affiliation">Information &amp; Electronics Research Institute, KAIST</p>
         <div class="contact-links">
+          <a href="mailto:sjchoi@casys.kaist.ac.kr">Email</a>
           <a href="cv/output/pdf/CV_sangjinchoi.pdf" target="_blank" rel="noopener noreferrer">CV</a>
           <a href="https://scholar.google.com/citations?user=rmo2Ay8AAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/sjchoi1" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
       <img class="profile-photo" src="img/profile_2_crop.jpg" alt="Sangjin Choi" width="160" height="194">
@@ -36,7 +38,7 @@
 
     <div class="intro">
       <p class="bio">
-        I am a postdoctoral researcher in the <a href="https://casyslab.kaist.ac.kr/">CASYS Lab</a> at KAIST's Information &amp; Electronics Research Institute. I design systems software for cost-efficient AI infrastructure by exploiting hardware and workload characteristics.
+        I build systems software that makes AI more efficient, from LLM serving and training to GPU memory management. I am a postdoctoral researcher in the <a href="https://casyslab.kaist.ac.kr/">CASYS Lab</a> at KAIST.
       </p>
 
       <p class="bio">
@@ -111,10 +113,14 @@
 
       <div class="pub-item">
         <div class="pub-venue">SIGOPS ATC '26
-          <span class="pub-acceptance" title="135 of 973 submissions accepted">Acceptance rate: 13.9%</span>
+          <span class="pub-acceptance" title="135 accepted / 973 submissions">Acceptance rate: 13.9%
+            <span class="pub-count">(135 / 973)</span>
+          </span>
+          <span class="pub-role">First author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</div>
+          <p class="pub-summary">Routes MoE requests by expert locality to reduce decoding latency.</p>
           <div class="pub-authors">
             <span class="me">Sangjin Choi</span>, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng
           </div>
@@ -123,34 +129,39 @@
               <a href="https://arxiv.org/abs/2607.00466" target="_blank" rel="noopener noreferrer">Paper</a>
               <a href="https://github.com/casys-kaist/ELDR" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
-            <div class="pub-badges" role="group" aria-label="Artifact evaluation: all three badges awarded">
-              <span class="pub-badges-label" aria-hidden="true">AE</span>
-              <img src="img/badges/acm-available.png" alt="Artifacts Available" title="Artifacts Available" width="40" height="40" loading="lazy">
-              <img src="img/badges/acm-functional.png" alt="Artifacts Evaluated: Functional" title="Artifacts Evaluated: Functional" width="40" height="40" loading="lazy">
-              <img src="img/badges/acm-reproduced.png" alt="Results Reproduced" title="Results Reproduced" width="40" height="40" loading="lazy">
-            </div>
+            <p class="pub-ae" title="Artifact evaluation badges awarded">AE: Available · Functional · Reproduced</p>
           </div>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-venue">MLSys '26
-          <span class="pub-acceptance" title="135 of 504 submissions accepted">Acceptance rate: 26.8%</span>
+          <span class="pub-acceptance" title="135 accepted / 504 submissions">Acceptance rate: 26.8%
+            <span class="pub-count">(135 / 504)</span>
+          </span>
+          <span class="pub-role">Co-author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">BEAM: Joint Resource–Power Optimization for Energy-Efficient LLM Inference under SLO Constraints</div>
           <div class="pub-authors">
             Hyunjae Lee, <span class="me">Sangjin Choi</span>, Seungjae Lim, Youngjin Kwon
           </div>
-          <div class="pub-links">
-            <a href="https://proceedings.mlsys.org/paper_files/paper/2026/hash/eb3c42ddfa16d8421fdba13528107cc1-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">Paper</a>
+          <div class="pub-resources">
+            <div class="pub-links">
+              <a href="https://proceedings.mlsys.org/paper_files/paper/2026/hash/eb3c42ddfa16d8421fdba13528107cc1-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://github.com/jlee335/BEAM-artifact" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+            <p class="pub-ae" title="Artifact evaluation badges awarded">AE: Available · Functional · Reproduced</p>
           </div>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-venue">EuroSys '26
-          <span class="pub-acceptance" title="138 of 723 submissions accepted across the spring and fall cycles">Acceptance rate: 19.1%</span>
+          <span class="pub-acceptance" title="138 accepted / 723 submissions across the spring and fall cycles">Acceptance rate: 19.1%
+            <span class="pub-count">(138 / 723)</span>
+          </span>
+          <span class="pub-role">Co-author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">MTTM: Dynamic Fast Memory Partitioning with Bandwidth Optimization for Multi-tenant Cloud
@@ -158,15 +169,22 @@
           <div class="pub-authors">
             Changjun Lee, <span class="me">Sangjin Choi</span>, Youngjin Kwon
           </div>
-          <div class="pub-links">
-            <a href="https://dl.acm.org/doi/abs/10.1145/3767295.3769371" target="_blank" rel="noopener noreferrer">Paper</a>
+          <div class="pub-resources">
+            <div class="pub-links">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3767295.3769371" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://github.com/casys-kaist/MTTM_ae_EuroSys26" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+            <p class="pub-ae" title="Artifact evaluation badges awarded">AE: Available · Functional · Reproduced</p>
           </div>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-venue">Findings of NAACL '25
-          <span class="pub-acceptance" title="Official estimate for Findings based on submissions to the October 2024 ARR cycle">Acceptance rate: 15% (est.)</span>
+          <span class="pub-acceptance" title="The program chairs report an estimated 15% acceptance rate for Findings and 477 accepted papers; the rate uses an estimated ARR submission pool">Acceptance rate: 15% (est.)
+            <span class="pub-count">(477 accepted)</span>
+          </span>
+          <span class="pub-role">Co-author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">Lossless Acceleration of Large Language Models with Hierarchical Drafting based on
@@ -177,13 +195,17 @@
           </div>
           <div class="pub-links">
             <a href="https://aclanthology.org/2025.findings-naacl.216/" target="_blank" rel="noopener noreferrer">Paper</a>
+            <a href="https://github.com/zomss/Hierarchy_Drafting" target="_blank" rel="noopener noreferrer">Code</a>
           </div>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-venue">ICCAD '23
-          <span class="pub-acceptance" title="172 of 750 submissions accepted">Acceptance rate: 22.9%</span>
+          <span class="pub-acceptance" title="172 accepted / 750 submissions">Acceptance rate: 22.9%
+            <span class="pub-count">(172 / 750)</span>
+          </span>
+          <span class="pub-role">Co-author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">PRIMO: A Full-Stack Processing-in-DRAM Emulation Framework for Machine Learning Workloads
@@ -200,10 +222,14 @@
 
       <div class="pub-item">
         <div class="pub-venue">USENIX ATC '23
-          <span class="pub-acceptance" title="Acceptance rate reported by the program chairs">Acceptance rate: 18%</span>
+          <span class="pub-acceptance" title="65 accepted / 353 submissions; the program chairs report a rounded acceptance rate of 18%">Acceptance rate: 18%
+            <span class="pub-count">(65 / 353)</span>
+          </span>
+          <span class="pub-role">First author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">EnvPipe: Performance-preserving DNN Training Framework for Saving Energy</div>
+          <p class="pub-summary">Saves energy in multi-GPU training with less than 1% performance slowdown.</p>
           <div class="pub-authors">
             <span class="me">Sangjin Choi</span>, Inhoe Koo, Jeongseob Ahn, Myeongjae Jeon, Youngjin Kwon
           </div>
@@ -213,22 +239,21 @@
               <a href="https://github.com/casys-kaist/EnvPipe" target="_blank" rel="noopener noreferrer">Code</a>
               <a href="https://www.youtube.com/watch?v=RfAq1JbHbXI" target="_blank" rel="noopener noreferrer">Talk</a>
             </div>
-            <div class="pub-badges" role="group" aria-label="Artifact evaluation: all three badges awarded">
-              <span class="pub-badges-label" aria-hidden="true">AE</span>
-              <img src="img/badges/usenix-available.png" alt="Artifacts Available" title="Artifacts Available" width="40" height="40" loading="lazy">
-              <img src="img/badges/usenix-functional.png" alt="Artifacts Evaluated: Functional" title="Artifacts Evaluated: Functional" width="40" height="40" loading="lazy">
-              <img src="img/badges/usenix-reproduced.png" alt="Results Reproduced" title="Results Reproduced" width="40" height="40" loading="lazy">
-            </div>
+            <p class="pub-ae" title="Artifact evaluation badges awarded">AE: Available · Functional · Reproduced</p>
           </div>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-venue">USENIX ATC '22
-          <span class="pub-acceptance" title="Acceptance rate reported by the program chairs">Acceptance rate: 16.5%</span>
+          <span class="pub-acceptance" title="64 accepted / 389 reviewed submissions (394 received minus 5 desk rejections); the program chairs report 16.5%">Acceptance rate: 16.5%
+            <span class="pub-count">(64 / 389)</span>
+          </span>
+          <span class="pub-role">Co-first author</span>
         </div>
         <div class="pub-details">
           <div class="pub-title">Memory Harvesting in Multi-GPU Systems with Hierarchical Unified Virtual Memory</div>
+          <p class="pub-summary">Uses idle memory on neighboring GPUs to accelerate memory-intensive workloads.</p>
           <div class="pub-authors">
             <span class="me">Sangjin Choi*</span>, Taeksoo Kim*, Jinwoo Jeong, Rachata Ausavarungnirun, Myeongjae Jeon,
             Youngjin Kwon, Jeongseob Ahn (*equal contribution)
@@ -239,12 +264,7 @@
               <a href="https://github.com/casys-kaist/HUVM" target="_blank" rel="noopener noreferrer">Code</a>
               <a href="https://www.youtube.com/watch?v=fAQhYPzW13I" target="_blank" rel="noopener noreferrer">Talk</a>
             </div>
-            <div class="pub-badges" role="group" aria-label="Artifact evaluation: all three badges awarded">
-              <span class="pub-badges-label" aria-hidden="true">AE</span>
-              <img src="img/badges/usenix-available.png" alt="Artifacts Available" title="Artifacts Available" width="40" height="40" loading="lazy">
-              <img src="img/badges/usenix-functional.png" alt="Artifacts Evaluated: Functional" title="Artifacts Evaluated: Functional" width="40" height="40" loading="lazy">
-              <img src="img/badges/usenix-reproduced.png" alt="Results Reproduced" title="Results Reproduced" width="40" height="40" loading="lazy">
-            </div>
+            <p class="pub-ae" title="Artifact evaluation badges awarded">AE: Available · Functional · Reproduced</p>
           </div>
         </div>
       </div>
