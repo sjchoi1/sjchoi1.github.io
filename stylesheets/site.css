@@ -95,7 +95,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
-  margin-top: 18px;
+  margin-top: 12px;
   font-size: 0.9375rem;
   font-weight: 500;
 }
@@ -104,6 +104,15 @@ h1 {
   display: inline-flex;
   align-items: center;
   min-height: 28px;
+}
+
+.contact-email {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  user-select: all;
 }
 
 .bio + .bio {
@@ -348,6 +357,11 @@ b, strong {
   }
 
   .contact-links {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+  }
+
+  .contact-email {
     grid-column: 1 / -1;
     margin-top: 12px;
   }
